@@ -9,4 +9,7 @@ class Band < ActiveRecord::Base
   attr_accessible :city, :email, :name, :state
 
   default_scope order: 'bands.name ASC'
+
+  has_many :gigs
+  has_many :venues, :through => :gigs
 end

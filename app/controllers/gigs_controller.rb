@@ -3,5 +3,7 @@ class GigsController < ApplicationController
   end
 
   def show
+  	@gig = Gig.find(params[:id])
+  	@vname = @gig.venue.name
   end
 end

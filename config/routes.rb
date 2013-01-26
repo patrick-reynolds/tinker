@@ -1,8 +1,6 @@
 DtgTest::Application.routes.draw do
 
-  get "gigs/new"
 
-  get "gigs/show"
 
   devise_for :users
 
@@ -13,6 +11,7 @@ DtgTest::Application.routes.draw do
   resources :venues
   resources :bands
   resources :users
+  resources :gigs
 
   root to: 'static_pages#home'
 

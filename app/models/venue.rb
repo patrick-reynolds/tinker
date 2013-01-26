@@ -9,4 +9,7 @@ class Venue < ActiveRecord::Base
   attr_accessible :address, :city, :name, :state
 
   default_scope order: 'venues.name ASC'
+
+  has_many :gigs
+  has_many :bands, :through => :gigs
 end

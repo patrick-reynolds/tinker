@@ -89,3 +89,32 @@ venue = Venue.create! :name => 'Trailer Space Record Shop', :address => '1401 A 
 puts 'New venue created: ' << venue.name
 venue = Venue.create! :name => 'White Horse', :address => '500 Comal St.', :city => 'Austin', :state => 'TX', :email => 'v23@gmail.com', :password => 'foobar', :password_confirmation => 'foobar'
 puts 'New venue created: ' << venue.name
+
+
+puts 'SETTING UP Gigs'
+gig = Gig.create! :venue_id => '1', :band_id => '1', :time => '7pm', :date => 'date.today', :slot => '1'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '1', :band_id => '2', :time => '8pm', :date => 'date.today', :slot => '2'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '1', :band_id => '3', :time => '9pm', :date => 'date.today', :slot => '3'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '2', :band_id => '4', :time => '7:30pm', :date => 'date.today', :slot => '1'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '2', :band_id => '5', :time => '8pm', :date => 'date.today', :slot => '2'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '2', :band_id => '6', :time => '8:45pm', :date => 'date.today', :slot => '3'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '3', :band_id => '7', :time => '7pm', :date => 'date.today', :slot => '1'
+puts 'New gig created: ' << gig.id
+
+
+
+
+
+
+
+
+
+
+
+
