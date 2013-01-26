@@ -1,0 +1,12 @@
+<% provide(:title, 'Bands') %>
+<h1>Austin Bands</h1>
+
+<ul class="bands">
+  <% @bands.each do |band| %>
+    <li>
+      <div id="bname"><%= link_to band.name, band %></div>
+      <div id="binfo"><%= link_to band.city, band %>
+      <%= link_to band.state, band %></div>
+    </li>
+  <% end %>
+</ul>

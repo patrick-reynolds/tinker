@@ -1,0 +1,13 @@
+<% provide(:title, 'Venues') %>
+<h1>Austin Venues</h1>
+
+<ul class="venues">
+  <% @venues.each do |venue| %>
+    <li>
+      <div id="vname"><%= link_to venue.name, venue %></div>
+      <div id="vinfo"><%= link_to venue.address, venue %>
+      <%= link_to venue.city, venue %>
+      <%= link_to venue.state, venue %></div>
+    </li>
+  <% end %>
+</ul>
