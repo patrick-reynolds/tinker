@@ -1,5 +1,14 @@
 <% provide(:title, @vname) %>
 <h1><%= @vname %></h1>
 
-<h2>Gigs#show and shit like that</h2>
-<p>Find me in app/views/gigs/show.html.erb</p>
+<%= tabs_tag(:builder => MenuTabBuilder) do |tab| %>
+  <%= tab.first        	'slot 1', 	root_path, :style => 'width: 30%;' %>
+  <%= tab.second  		'slot 2', 	'#', :style => 'width: 30%;' %>
+  <%= tab.third     	'slot 3', 	'#', :style => 'width: 30%;' %>
+  <%= tab.back     		'Venues', 	venues_path, :style => 'width: 10%;' %>
+<% end %>
+
+
+
+
+

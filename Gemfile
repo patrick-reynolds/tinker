@@ -21,6 +21,8 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
+gem "tabs_on_rails"
+
 
 
 # To use ActiveModel has_secure_password

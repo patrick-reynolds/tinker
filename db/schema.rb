@@ -88,4 +88,6 @@ ActiveRecord::Schema.define(:version => 20130126071652) do
   add_index "venues", ["email"], :name => "index_venues_on_email", :unique => true
   add_index "venues", ["reset_password_token"], :name => "index_venues_on_reset_password_token", :unique => true
 
+  
+
 end

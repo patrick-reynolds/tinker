@@ -1,4 +1,7 @@
 class GigsController < ApplicationController
+
+	set_tab :first
+
   def new
   end
 
