@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  venue_id: 1
+  band_id: 1
+  time: MyString
+  date: 2013-01-26 00:16:52
+  slot: 1
+
+two:
+  venue_id: 1
+  band_id: 1
+  time: MyString
+  date: 2013-01-26 00:16:52
+  slot: 1

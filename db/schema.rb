@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130114094808) do
+ActiveRecord::Schema.define(:version => 20130126071652) do
 
   create_table "bands", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(:version => 20130114094808) do
 
   add_index "bands", ["email"], :name => "index_bands_on_email", :unique => true
   add_index "bands", ["reset_password_token"], :name => "index_bands_on_reset_password_token", :unique => true
+
+  create_table "gigs", :force => true do |t|
+    t.integer  "venue_id"
+    t.integer  "band_id"
+    t.string   "time"
+    t.datetime "date"
+    t.integer  "slot"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

@@ -4,9 +4,9 @@
 <ul class="bands">
   <% @bands.each do |band| %>
     <li>
-      <div id="bname"><%= link_to band.name, band %></div>
-      <div id="binfo"><%= link_to band.city, band %>
-      <%= link_to band.state, band %></div>
+      <div id="bname"><%= link_to band.name.titleize, band %></div>
+      <div id="binfo"><%= link_to band.city, '#' %>
+      <%= link_to band.state, '#' %></div>
     </li>
   <% end %>
 </ul>

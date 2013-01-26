@@ -1,5 +1,5 @@
-<% provide(:title, @band.name) %>
-<h1><%= @band.name %></h1>
+<% provide(:title, @band.name.titleize) %>
+<h1><%= @band.name.titleize %></h1>
 <div class="row">
   <aside class="span4">
     <section>
