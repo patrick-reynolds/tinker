@@ -38,12 +38,8 @@ ActiveRecord::Schema.define(:version => 20130126141359) do
     t.integer  "venue_id"
     t.integer  "band_id"
     t.datetime "date"
-    t.string   "slot1"
-    t.string   "time1"
-    t.string   "slot2"
-    t.string   "time2"
-    t.string   "slot3"
-    t.string   "time3"
+    t.integer  "slot"
+    t.string   "time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
