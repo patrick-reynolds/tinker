@@ -11,5 +11,9 @@ class Band < ActiveRecord::Base
   default_scope order: 'bands.name ASC'
 
   has_many :gigs
-  has_many :venues, :through => :gigs
+  has_many :posts, dependent: :destroy
+
+  def feed
+    Post.where("band_id = ?", id)
+  end
 end

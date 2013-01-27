@@ -44,8 +44,7 @@ ActiveRecord::Schema.define(:version => 20130127121715) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "gigs", ["band_id"], :name => "index_gigs_on_band_id"
-  add_index "gigs", ["venue_id"], :name => "index_gigs_on_venue_id"
+  add_index "gigs", ["band_id", "venue_id", "time"], :name => "index_gigs_on_band_id_and_venue_id_and_time"
 
   create_table "menu_tab_builders", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -55,11 +54,12 @@ ActiveRecord::Schema.define(:version => 20130127121715) do
   create_table "posts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
+    t.integer  "band_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "posts", ["user_id", "created_at"], :name => "index_posts_on_user_id_and_created_at"
+  add_index "posts", ["user_id", "band_id", "created_at"], :name => "index_posts_on_user_id_and_band_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"

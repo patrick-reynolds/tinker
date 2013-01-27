@@ -1,7 +1,20 @@
-
-  
+<% if band_signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/band_info' %>
+      </section>
+      <section>
+        <%= render 'shared/post_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>  
+<% else %>
   <h1>Welcome to DTG</h1>
-
   <h2>
       Discover local Austin music. Be a voice for your favorite bands. Elevate music important to you.
   </h2>
@@ -10,5 +23,5 @@
     <h2></h2>
     <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
   </div>
-
+<% end %> 
 

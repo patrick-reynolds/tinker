@@ -5,14 +5,27 @@ class PostsController < ApplicationController
 
 
 	def create
-		@post = current_user.posts.build(params[:post])
-		if @post.save
-			flash[:success] = "Digged the Gig!"
-			redirect_to root_path
+		if user_signed_in?
+			@post = current_user.posts.build(params[:post])
+			if @post.save
+				flash[:success] = "Digged the Gig!"
+				redirect_to root_url
+			else
+				@feed_items = []
+				render venues_path
+			end
+		elsif band_signed_in?
+			@post = current_band.posts.build(params[:post])
+			if @post.save
+				flash[:success] = "Digged the Gig!"
+				redirect_to root_url
+			else
+				@beed_items = []
+				render 'static_pages/home'
+			end
 		else
-			@feed_items = []
-			render venues_path
-		end
+			root_path
+	    end
 	end
 
 	def destroy

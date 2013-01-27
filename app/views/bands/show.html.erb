@@ -1,12 +1,14 @@
 <% provide(:title, @band.name.titleize) %>
 <h1><%= @band.name.titleize %></h1>
 <div class="row">
-  <aside class="span4">
-    <section>
-      <h2>
-        Some text here.
-      </h2>
-    </section>
-  </aside>
+  <%= render 'profile' %>
+  <div class="span8">
+    <% if @band.posts.any? %>
+      <h3>Digs n Dogs (<%= @band.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
 </div>
-

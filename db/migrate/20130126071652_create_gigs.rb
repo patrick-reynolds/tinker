@@ -10,7 +10,6 @@ class CreateGigs < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :gigs, :band_id
-    add_index :gigs, :venue_id
+    add_index :gigs, [:band_id, :venue_id, :time]
   end
 end
