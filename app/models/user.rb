@@ -8,4 +8,10 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :city, :group, :state, :name
 
+  has_many :posts, dependent: :destroy
+
+  def feed
+  	Post.where("user_id = ?", id)
+  end
+
 end

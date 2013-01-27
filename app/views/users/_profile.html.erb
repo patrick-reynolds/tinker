@@ -1,0 +1,20 @@
+<aside class="span4">
+    <section>
+      <h3>
+        <%= @user.name.titleize %>
+      </h3>
+    </section>
+    <section>
+      add shared stats here
+    </section>
+    <section>
+    	<% if @user.posts.any? %>
+			  <%= form_for @post do |f| %>
+				  <div class="field">
+				    <%= f.text_area :content, placeholder: "Dig this Gig..." %>
+				  </div>
+				  <%= f.submit "DTG", class: "btn btn-large btn-primary" %>
+			<% end %>
+		 <% end %>
+     </section>
+  </aside>

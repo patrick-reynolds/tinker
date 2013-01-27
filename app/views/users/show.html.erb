@@ -1,1 +1,14 @@
-show page for users
+<% provide(:title, @user.name) %>
+<div class="row">
+  <%= render 'profile' %>
+  <div class="span8">
+      
+      <h3>Digs (<%= @user.posts.count %>)</h3>
+      <% if @feed_items.any? %>
+		  <ol class="posts">
+		    <%= render partial: 'shared/feed_item', collection: @feed_items %>
+		  </ol>
+		<% end %>
+
+  </div>
+</div>

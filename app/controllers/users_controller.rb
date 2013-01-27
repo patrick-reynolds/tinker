@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 	def show
-		@band = Band.find(params[:id])
+		@user = User.find(params[:id])
+		@posts = @user.posts
+		@post = @user.posts.build
+		@feed_items = @user.feed
 	end
 end

@@ -5,6 +5,9 @@ gem 'bootstrap-sass', '2.1'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise', '2.0'
+gem "tabs_on_rails"
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
 
 
 # Bundle edge Rails instead:
@@ -21,7 +24,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem "tabs_on_rails"
+
 
 
 

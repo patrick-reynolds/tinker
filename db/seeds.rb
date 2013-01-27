@@ -108,6 +108,36 @@ gig = Gig.create! :venue_id => '3', :band_id => '7', :date => 'date.today', :slo
 puts 'New gig created: ' << gig.id
 
 
+puts 'SETTING UP Posts'
+post = Post.create! :user_id => '1', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '1', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '1', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+
+post = Post.create! :user_id => '2', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '2', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '2', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+
+post = Post.create! :user_id => '3', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '3', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '3', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+
+post = Post.create! :user_id => '4', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '4', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+post = Post.create! :user_id => '4', :content => 'Some stuff here about a band.'
+puts 'New post created: ' << post.id
+
+
 
 
 

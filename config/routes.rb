@@ -3,15 +3,14 @@ DtgTest::Application.routes.draw do
 
 
   devise_for :users
-
   devise_for :bands
-
   devise_for :venues
 
   resources :venues
   resources :bands
   resources :users
   resources :gigs
+  resources :posts
 
   root to: 'static_pages#home'
 
