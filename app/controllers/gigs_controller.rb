@@ -9,5 +9,7 @@ class GigsController < ApplicationController
   	@gig = Gig.find(params[:id])
   	@vname = @gig.venue.name
   	@sname = @gig.band.name
+
+  	
   end
 end

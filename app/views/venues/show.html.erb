@@ -1,5 +1,13 @@
 <% provide(:title, @venue.name) %>
 <h1><%= @venue.name %></h1>
+
+<%= tabs_tag(:builder => MenuTabBuilder) do |tab| %>
+  <%= tab.first        	 @gig.band.name.titleize, 	'#', :style => 'width: 30%;' %>
+  <%= tab.second  		 @s2, 	'#', :style => 'width: 30%;' %>
+  <%= tab.third     	 @s3, 	'#', :style => 'width: 30%;' %>
+  <%= tab.back     		 'Venue', 	venues_path, :style => 'width: 10%;' %>
+<% end %>
+
 <div class="row">
  	<h2>No Gigs scheduled today at <%= @venue.name %>. Check out a different date or venue.</h2>
   <aside class="span4">

@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(:version => 20130126141359) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "gigs", ["band_id"], :name => "index_gigs_on_band_id"
+  add_index "gigs", ["venue_id"], :name => "index_gigs_on_venue_id"
+
   create_table "menu_tab_builders", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
