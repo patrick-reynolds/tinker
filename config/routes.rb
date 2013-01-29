@@ -1,7 +1,5 @@
 DtgTest::Application.routes.draw do
 
-
-
   devise_for :users
   devise_for :bands
   devise_for :venues
@@ -11,6 +9,7 @@ DtgTest::Application.routes.draw do
   resources :users
   resources :gigs
   resources :posts
+
 
   root to: 'static_pages#home'
 

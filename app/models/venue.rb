@@ -12,4 +12,5 @@ class Venue < ActiveRecord::Base
 
   has_many :gigs
   has_many :bands, :through => :gigs
+  has_many :bands, through: :relationships, source: :gig_id
 end

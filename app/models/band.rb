@@ -12,6 +12,7 @@ class Band < ActiveRecord::Base
 
   has_many :gigs
   has_many :posts, dependent: :destroy
+  has_many :venues, through: :relationships, source: :gig_id
 
   def feed
     Post.where("band_id = ?", id)

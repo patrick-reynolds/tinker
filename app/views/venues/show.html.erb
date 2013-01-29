@@ -1,12 +1,36 @@
 <% provide(:title, @venue.name) %>
 <h1><%= @venue.name %></h1>
 
-<%= tabs_tag(:builder => MenuTabBuilder) do |tab| %>
-  <%= tab.first        	 @gig.band.name.titleize, 	'#', :style => 'width: 30%;' %>
-  <%= tab.second  		 @s2, 	'#', :style => 'width: 30%;' %>
-  <%= tab.third     	 @s3, 	'#', :style => 'width: 30%;' %>
-  <%= tab.back     		 'Venue', 	venues_path, :style => 'width: 10%;' %>
-<% end %>
+<article class="tabs">
+	<% @s1.each do |gig| %>
+		<section id="tab1">
+			<h2><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#tab1' %></h2>
+			<%= render 'tab1' %>
+		</section>
+	<% end %>
+	<% @s2.each do |gig| %>
+		<section id="tab2">
+			<h2><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#tab2' %></h2>
+			<p>This content appears on tab 2.</p>
+		</section>
+	<% end %>
+	<% @s3.each do |gig| %>
+		<section id="tab3">
+			<h2><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#tab3' %></h2>
+			<p>This content appears on tab 3.</p>
+		</section>
+	<% end %>
+</article>
+
+
+<!--
+	<%= tabs_tag(:builder => MenuTabBuilder) do |tab| %>
+	  <%= tab.first        	 @gigs, '#', :style => 'width: 30%;' %>
+	  <%= tab.second  		 @s2, 	'#', :style => 'width: 30%;' %>
+	  <%= tab.third     	 @s3, 	'#', :style => 'width: 30%;' %>
+	  <%= tab.back     		 'Venue', 	venues_path, :style => 'width: 10%;' %>
+	<% end %>
+
 
 <div class="row">
  	<h2>No Gigs scheduled today at <%= @venue.name %>. Check out a different date or venue.</h2>
@@ -16,3 +40,31 @@
     </section>
   </aside>
 </div>
+
+<ul class="venues">
+  <% @s1.each do |gig| %>
+    <li>
+    	<div id="vname"><%= link_to gig.band.name.titleize, gig %></div>
+    	<div id="vinfo"><%= link_to gig.time, gig %></div>
+	</li>
+  <% end %>
+</ul>
+
+<div class="tabbed-area">
+	<ul class="tabs group">
+		<% @s1.each do |gig| %>
+	    <li>
+    		<div><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#' %></div>
+    	</li>
+	    <% end %>	
+	</ul>
+</div>
+
+-->
+
+
+
+
+
+
+

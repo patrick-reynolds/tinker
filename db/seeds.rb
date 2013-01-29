@@ -104,7 +104,49 @@ gig = Gig.create! :venue_id => '2', :band_id => '5', :date => 'date.today', :slo
 puts 'New gig created: ' << gig.id
 gig = Gig.create! :venue_id => '2', :band_id => '6', :date => 'date.today', :slot => '3', :time => '6pm'
 puts 'New gig created: ' << gig.id
-gig = Gig.create! :venue_id => '3', :band_id => '7', :date => 'date.today', :slot => '1', :time => '10pm'
+gig = Gig.create! :venue_id => '3', :band_id => '7', :date => 'date.today', :slot => '1', :time => '6pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '3', :band_id => '8', :date => '1/27/13', :slot => '2', :time => '7pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '3', :band_id => '9', :date => 'date.today', :slot => '3', :time => '8pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '4', :band_id => '10', :date => 'date.today', :slot => '1', :time => '3pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '4', :band_id => '1', :date => 'date.today', :slot => '2', :time => '4pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '4', :band_id => '2', :date => 'date.today', :slot => '3', :time => '5pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '5', :band_id => '3', :date => 'date.today', :slot => '1', :time => '9pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '5', :band_id => '4', :date => 'date.today', :slot => '2', :time => '10pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '5', :band_id => '5', :date => '1/27/13', :slot => '3', :time => '11pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '6', :band_id => '6', :date => 'date.today', :slot => '1', :time => '8pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '6', :band_id => '7', :date => 'date.today', :slot => '2', :time => '9pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '6', :band_id => '8', :date => 'date.today', :slot => '3', :time => '10pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '7', :band_id => '9', :date => 'date.today', :slot => '1', :time => '5pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '7', :band_id => '10', :date => 'date.today', :slot => '2', :time => '6pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '8', :band_id => '8', :date => 'date.today', :slot => '1', :time => '6pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '8', :band_id => '1', :date => '1/27/13', :slot => '2', :time => '7pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '9', :band_id => '2', :date => 'date.today', :slot => '1', :time => '8pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '9', :band_id => '3', :date => 'date.today', :slot => '2', :time => '9pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '9', :band_id => '4', :date => 'date.today', :slot => '3', :time => '10pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '10', :band_id => '5', :date => 'date.today', :slot => '1', :time => '5pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '11', :band_id => '6', :date => 'date.today', :slot => '1', :time => '6pm'
+puts 'New gig created: ' << gig.id
+gig = Gig.create! :venue_id => '12', :band_id => '7', :date => 'date.today', :slot => '1', :time => '10pm'
 puts 'New gig created: ' << gig.id
 
 
