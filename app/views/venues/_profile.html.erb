@@ -1,0 +1,17 @@
+<aside class="span4">
+    <section>
+      <% @s2.each do |gig| %>
+      <h3>
+        <%= gig.band.name.titleize %>
+      </h3>
+      <% end %>
+    </section>
+    <br />
+    <div>
+      <%= link_to "TIP", '#', class: "btn btn-large btn-dtg" %>
+    </div>
+    <br />
+    <div>
+			<%= link_to "DTG", '#', class: "btn btn-large btn-fox" %>
+     </div>
+  </aside>

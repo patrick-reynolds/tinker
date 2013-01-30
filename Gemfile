@@ -5,7 +5,6 @@ gem 'bootstrap-sass', '2.1'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise', '2.0'
-gem "tabs_on_rails"
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 

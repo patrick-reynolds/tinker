@@ -1,7 +1,7 @@
 <% provide(:title, @band.name.titleize) %>
 <h1><%= @band.name.titleize %></h1>
 <div class="row">
-  <%= render 'profile' %>
+  <%= render 'bands/profile' %>
   <div class="span8">
     <% if @band.posts.any? %>
       <h3>Digs n Dogs (<%= @band.posts.count %>)</h3>
@@ -11,4 +11,4 @@
       <%= will_paginate @posts %>
     <% end %>
   </div>
-</div>
+</div> 

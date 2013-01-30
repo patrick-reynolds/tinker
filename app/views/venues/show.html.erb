@@ -1,26 +1,89 @@
-<% provide(:title, @venue.name) %>
+<% provide(:title, @venue.name) %> 
 <h1><%= @venue.name %></h1>
 
-<article class="tabs">
-	<% @s1.each do |gig| %>
-		<section id="tab1">
-			<h2><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#tab1' %></h2>
-			<%= render 'tab1' %>
-		</section>
-	<% end %>
-	<% @s2.each do |gig| %>
-		<section id="tab2">
-			<h2><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#tab2' %></h2>
-			<p>This content appears on tab 2.</p>
-		</section>
-	<% end %>
-	<% @s3.each do |gig| %>
-		<section id="tab3">
-			<h2><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#tab3' %></h2>
-			<p>This content appears on tab 3.</p>
-		</section>
-	<% end %>
-</article>
+<div class="tabs">
+
+   <div class="tab">
+   	<% @s1.each do |gig| %>
+       <input type="radio" id="tab-1" name="tab-group-1" checked>
+       <label for="tab-1">
+			<%= gig.band.name.titleize + ' ... ' + gig.time %>
+       </label>
+       <div class="tabcontent">
+	       <div class="row">
+          <h3>
+            <%= gig.band.name.titleize %>
+          </h3>
+			   <%= render 'tab' %>
+			  <div class="profile">
+			    <% if @band.posts.any? %>
+			      <h3>Digs (<%= @band.posts.count %>)</h3>
+			      <ol class="posts">
+			        <%= render @posts %>
+			      </ol>
+			      <%= will_paginate @posts %>
+			    <% end %>
+			  </div>
+			</div> 
+       </div> 
+    <% end %> 
+   </div>
+    
+   <div class="tab">
+   	 <% @s2.each do |gig| %>
+       <input type="radio" id="tab-2" name="tab-group-1">
+       <label for="tab-2">
+			<%= gig.band.name.titleize + ' ... ' + gig.time %>
+       </label>
+       <div class="tabcontent">
+			<div class="row">
+          <h3>
+            <%= gig.band.name.titleize %>
+          </h3>
+         <%= render 'tab' %>
+        <div class="profile">
+          <% if @band.posts.any? %>
+            <h3>Digs (<%= @band.posts.count %>)</h3>
+            <ol class="posts">
+              <%= gig.band.posts %>
+            </ol>
+            <%= will_paginate @posts %>
+          <% end %>
+        </div>
+      </div>      
+  		</div> 
+  	  <% end %>
+   </div>
+    
+    <div class="tab">
+      <% @s3.each do |gig| %>
+       <input type="radio" id="tab-3" name="tab-group-1">
+       <label for="tab-3">
+			<%= gig.band.name.titleize + ' ... ' + gig.time %>
+       </label>
+       <div class="tabcontent">
+           <div class="row">
+            <h3>
+              <%= gig.band.name.titleize %>
+            </h3>
+         <%= render 'tab' %>
+        <div class="profile">
+          <% if @band.posts.any? %>
+            <h3>Digs (<%= @band.posts.count %>)</h3>
+            <ol class="posts">
+              <%= render @posts %>
+            </ol>
+            <%= will_paginate @posts %>
+          <% end %>
+        </div>
+      </div>
+      <% end %> 
+   </div>
+    
+</div>
+
+
+
 
 
 <!--

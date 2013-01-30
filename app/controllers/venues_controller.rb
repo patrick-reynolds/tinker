@@ -1,6 +1,4 @@
 class VenuesController < ApplicationController
-
-	set_tab :first
   
   def show
   	@venue = Venue.find(params[:id])
@@ -14,6 +12,8 @@ class VenuesController < ApplicationController
     @s2 = Gig.where('venue_id = ? and slot = ?', @venue, 2) 
     @s3 = Gig.where('venue_id = ? and slot = ?', @venue, 3) 
 
+    @band = Band.find(params[:id])
+    @posts = @band.posts.paginate(page: params[:page])
 
   end
 

@@ -10,7 +10,6 @@ DtgTest::Application.routes.draw do
   resources :gigs
   resources :posts
 
-
   root to: 'static_pages#home'
 
   #Static Pages 
