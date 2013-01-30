@@ -86,48 +86,4 @@
 
 
 
-<!--
-	<%= tabs_tag(:builder => MenuTabBuilder) do |tab| %>
-	  <%= tab.first        	 @gigs, '#', :style => 'width: 30%;' %>
-	  <%= tab.second  		 @s2, 	'#', :style => 'width: 30%;' %>
-	  <%= tab.third     	 @s3, 	'#', :style => 'width: 30%;' %>
-	  <%= tab.back     		 'Venue', 	venues_path, :style => 'width: 10%;' %>
-	<% end %>
-
-
-<div class="row">
- 	<h2>No Gigs scheduled today at <%= @venue.name %>. Check out a different date or venue.</h2>
-  <aside class="span4">
-    <section>
-    
-    </section>
-  </aside>
-</div>
-
-<ul class="venues">
-  <% @s1.each do |gig| %>
-    <li>
-    	<div id="vname"><%= link_to gig.band.name.titleize, gig %></div>
-    	<div id="vinfo"><%= link_to gig.time, gig %></div>
-	</li>
-  <% end %>
-</ul>
-
-<div class="tabbed-area">
-	<ul class="tabs group">
-		<% @s1.each do |gig| %>
-	    <li>
-    		<div><%= link_to gig.band.name.titleize + ' ... ' + gig.time, '#' %></div>
-    	</li>
-	    <% end %>	
-	</ul>
-</div>
-
--->
-
-
-
-
-
-
 
